@@ -1,0 +1,19 @@
+MOSIP fields
+--------------
+vid,name,gender,dob,phoneNumber,emailId,fullAddress
+
+OpenG2P fields
+----------------
+
+id,family_name,given_name,birthdate,gender,phone,registration_date,area_id,area_id/id,bank_ids,bank_ids/id,bank_ids/acc_number,bank_ids/bank_id/name,bank_ids/bank_id/id,reg_ids/id,reg_ids/value,reg_ids/id_type/name,reg_ids/id_type/id,z_cst_indv_disability_level,z_cst_indv_cyclone_aug_2022_injured,z_cst_indv_cyclone_aug_2022_lost_primary_source_income,z_cst_indv_cyclone_aug_2022_lost_livestock,z_cst_indv_receive_government_benefits,individual_membership_ids/id,individual_membership_ids/kind/id,individual_membership_ids/kind/name,individual_membership_ids/group/id
+
+Mapping
+-------
+
+name = given_name + family_name
+vid = reg_ids/value
+gender = gender 
+dob = birthdate
+phoneNumber = phone
+emailId =  TBA
+fullAddress = TBA
