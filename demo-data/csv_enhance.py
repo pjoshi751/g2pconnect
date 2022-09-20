@@ -1,6 +1,6 @@
-#!/usr/bin/python
+
 # This script adds additional columns and populates the g2pconnect csv with MOSIP compatible data.
-# Usage: python enhance_csv.py <original_csv> <output_csv>
+# Usage: python3 enhance_csv.py <original_csv> <output_csv>
 
 import sys
 import os
