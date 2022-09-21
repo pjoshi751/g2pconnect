@@ -12,10 +12,10 @@ source ~/.venv/g2pconnect/bin/activate
 ```
 * Depedencies:
 ```
-pip install -f requiremnts.txt
+pip install -f requirements.txt
 ```
 
 ## Run
 ```
-python csv_enhance --help
+python csv_enhance.py --help
 ```
