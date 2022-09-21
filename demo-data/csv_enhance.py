@@ -7,8 +7,11 @@ import os
 import argparse
 import csv
 from datetime import date
+from vid import *
 import random
 import string
+
+VID_LEN = 16
 
 def args_parse():
     parser = argparse.ArgumentParser()
@@ -32,7 +35,7 @@ def main():
     with open(args.original_csv, 'rt') as csvfile:
         reader = csv.DictReader(csvfile)
         # Add MOSIP specific fields
-        fieldnames = reader.fieldnames + ['full_name', 'dob', 'email_id', 'full_address']
+        fieldnames = reader.fieldnames + ['vid', 'full_name', 'dob', 'email_id', 'full_address']
         output_rows = []
         for row in reader:
             row['full_name'] = row['given_name'] + ' ' + row['family_name']
@@ -41,6 +44,12 @@ def main():
             row['full_address'] = ''
             if len(row['reg_ids/value'].strip()) == 0:
                 row['reg_ids/value'] = generate_random_token()
+            if 'vid' not in row:
+                row['vid'] = generate_id(VID_LEN)  
+            else:
+                if len(row['vid'].strip()) == 0:
+                    row['vid'] = generate_id(VID_LEN)  
+
             output_rows.append(row) 
 
     print('Writing output CSV')
