@@ -1,4 +1,4 @@
-# CSV Enahance
+# CSV Enhance
 
 ## About
 This script adds additional columns and populates the g2pconnect csv with MOSIP compatible data.
